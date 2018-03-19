@@ -18,8 +18,7 @@
 
     <mt-button type="primary" @click.native="addNew">+</mt-button>
 
-    <mt-button type="primary" @click.native="increase">-
-    </mt-button>
+    <mt-button type="primary" @click.native="increase">-</mt-button>
 
 
 
@@ -53,7 +52,7 @@
 	    // })
 	    computed:{
 	    	...mapState(["count"]),
-	    	// ...mapGetters(["count"])
+	    	...mapGetters(["count"])
 	    },
 
 	    // methods:mapMutations(

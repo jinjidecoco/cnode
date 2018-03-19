@@ -31,6 +31,7 @@
 		methods:{
 			change:function(index){
 				this.cur=index;
+				console.log(index);
 			}
 		}
 
@@ -38,13 +39,13 @@
 </script>
 <style lang='less'>
   .tab {
-  	margin-top:1.0rem;
+  	margin-top:0.5rem;
   	background: #f6f6f6;
   	ul{
   	   display:flex;
   	   justify-content: center;
   	   align-items: center;
-  	   padding:0.25rem 0;
+  	   padding:0.5rem 0;
   	   li{
   		padding:0 0.15rem;
   		margin:0 0.5rem;
@@ -57,7 +58,7 @@
   				}
   			}
   		   a{
-  			 font-size:14px;
+  			 font-size:18px;
   			 color:#80bd01;
   		    }
   	   }

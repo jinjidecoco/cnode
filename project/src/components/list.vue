@@ -75,25 +75,26 @@ import loading from './loading.vue'
 .lists{
 	background: #fff;
   li{
-    padding:10px 15px;
+    padding:0.5rem 0.75rem 0.5rem 1.0rem;
     border-bottom:1px solid #e6e6ea8f;
     img{
     	width:1.5rem;
     	height:1.5rem;
+    	margin-right:0.4rem;
     	vertical-align: middle
     }
     .article-title{
-    	margin-left:0.25rem;
+    	// margin-left:0.25rem;
     	display:inline-block;
-    	font-size:14px;
-    	max-width: 80%;
+    	font-size:16px;
+    	max-width: 86%;
     	text-overflow: ellipsis;
     	white-space: nowrap;
     	overflow: hidden;
     	vertical-align: middle;
     }
     .count{
-    	font-size:10px;
+    	font-size:12px;
     	display: block;
     	b{
     		color:#9e78c0;

@@ -1,13 +1,12 @@
 <template>
   <div class="demo">
     <headBar></headBar>
-    <tab ></tab>
-    <list></list>  
-       <!--  <keep-alive>
+<!--     <tab ></tab>
+ -->    <list></list>  
+        <keep-alive>
             <router-view></router-view>
-        </keep-alive> -->
- <!--    <router-link :to="{ name:'addSection'}">
-    </router-link> -->
+        </keep-alive>
+
   </div>
 </template>
 
@@ -21,12 +20,10 @@ export default {
   name: 'demo',
   components:{
     headBar,tab,list
-
   },
   data() {
     return{
   
-
     }
   }
 }

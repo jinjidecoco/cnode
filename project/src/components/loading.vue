@@ -21,13 +21,14 @@
     position: absolute;
     top:50%;
     left:50%;
-    margin-left:-40px;
-    margin-top: -40px;
- 	width:80px;
- 	height:80px;
+    margin-left:-2.0rem;
+    margin-top: -2.0rem;
+ 	width:4.0rem;
+ 	height:4.0rem;
  	.loading{
- 		width:30px;
- 		height:30px;
+ 		margin:0.75rem auto;
+ 		width:1.5rem;
+ 		height:1.5rem;
  		border:5px solid #f3f3f3;
  		border-top:5px solid #0dc5c1;
  		border-radius: 50%;
