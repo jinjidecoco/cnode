@@ -52,11 +52,11 @@ import loading from '../components/loading.vue'
   	// }
   }	
 </script>
-<style lang='less'>
+<style lang='less' >
+   @import '../assets/css/markdown.less';
   .content{
-  	margin-top:1.0rem;
   	background: #fff;
-  	padding:0.5rem;
+  	padding:4.5rem 0.5rem;
   	h2{
   		font-size:24px;
   		line-height: 1.5;
@@ -67,23 +67,17 @@ import loading from '../components/loading.vue'
   	}
   }
   .detail-content{
-  	img{
-  		max-width:100%;
-  		vertical-align: middle;
-  		height:auto;
-  	}
-  	p{
-  		font-size:15px;
-  		margin:0.5rem 0;
-  		line-height: 1.5;
-  	}
-
-
+  	// img{
+  	// 	max-width:100%;
+  	// 	vertical-align: middle;
+  	// 	height:auto;
+  	// }
+  	// p{
+  	// 	font-size:15px;
+  	// 	margin:0.5rem 0;
+  	// 	line-height: 1.5;
+  	// }
   }
-  .markdown-body{
-    font-size: 14px;
-    margin-top: 0.25rem;
-    // padding-left: 20px;
-  }
+
 
 </style>

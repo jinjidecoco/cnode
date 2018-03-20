@@ -18,7 +18,7 @@
  	// display:flex;
   //   align-items:center;
   //   justify-content:center;
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
     margin-left:-2.0rem;

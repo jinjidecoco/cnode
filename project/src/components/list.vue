@@ -32,33 +32,55 @@ import loading from './loading.vue'
 	  	    return{
 	  	    	 items:[],
 	  	    	 tab:'all',
-	  	    	 show:false
+	  	    	 show:false,
+	  	    	 scroll: true,
+	  	    	 limit:50,
+	  	    	 page:1,
 		  	}
 	    },
 	    created:function(){
 	       this.fetchData(); 
+	    
+	    },
+	    mounted(){
+	    	   window.addEventListener('scroll', this.getScrollData)
+	
 	    },
 	    methods:{
 	    	fetchData:function(){
-	    		// var tab =this.tab;
-	    	    // console.log(tab);
 	    	    this.show=true;
 	    	    this.$http.get('https://cnodejs.org/api/v1/topics',{
 	    	 	params:{
 	    	 		tab:this.tab,
-	    	 		page:1,
-	    	 		limit: 50
+	    	 		page:this.page,
+	    	 		limit: 20
 	    	 	}
 	    	 	
 	    	 })
 	    	 .then(function(res){
-                 this.items=res.data.data;
-                 this.show=false;
-                 // console.log(res.data.data[0]);
+	    	 	    this.scroll = true;
+	    	 	    this.show = false;
+	    	 	  if(this.page<=1){
+                    this.items = res.data.data;
+                  }else{
+                  	this.items=this.items.concat(res.data.data);
+                  }
 	    	 }.bind(this))
 	    	 .catch(function(error){
 	    	 	console.log(error);
 	    	 })
+	    	},
+	    	getScrollData(){
+	    		if(this.scroll){
+		    		let totalheight = parseInt(window.innerHeight) + parseInt(window.scrollY);
+		    	    if (document.body.clientHeight <= totalheight + 1000) {
+		    	    	console.log('我要加载了')
+		    	    	this.scroll = false;
+		    	    	this.page += 1;
+		    	    	// this.show=true;
+		    	    	this.fetchData();
+	                }	
+                }
 	    	}
 	    },
 	    watch: {
@@ -74,6 +96,7 @@ import loading from './loading.vue'
 <style lang='less'>
 .lists{
 	background: #fff;
+	padding-top:6.65rem;
   li{
     padding:0.5rem 0.75rem 0.5rem 1.0rem;
     border-bottom:1px solid #e6e6ea8f;

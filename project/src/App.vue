@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang='less'>
-  @import './assets/css/reset.less';
+   @import './assets/css/reset.less';
   // @import './assets/css/common.less';
 
 #app { 

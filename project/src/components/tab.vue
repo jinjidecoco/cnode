@@ -20,7 +20,7 @@
 			return {
 				 cur:0,
 				 tabs:[
-				 {name:'全部',prop:'all'},
+				 {name:'全部',prop:'all' },
 				 {name:'精华',prop:'good'},
 				 {name:'分享',prop:'share'},
 				 {name:'问答',prop:'ask'},
@@ -39,7 +39,10 @@
 </script>
 <style lang='less'>
   .tab {
-  	margin-top:0.5rem;
+  	position:fixed;
+  	top:4.5rem;
+  	width:100%;
+  	// margin-top:0.5rem;
   	background: #f6f6f6;
   	ul{
   	   display:flex;

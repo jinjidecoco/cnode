@@ -4,10 +4,14 @@
 		@click='hideSideBar'>
 		</div>
 		<div class='side-bar':class="{show:isShow}">
-			<div class='user-name'>用户名 : 小飒飒</div>
+			<div class='user-name'>
+				<i class='icon-yonghu icon iconfont f26'></i>
+			     用户名 : 小飒飒
+		    </div>
 		    <ul>
 				<li v-for='list in lists'>
 					<router-link :to="{}">
+						<i class='icon-shouye1 icon iconfont f24'></i>
 						{{list.title}}
 					</router-link>	
 					<i class='icon-gengduo3 icon iconfont' style='float:right'></i>	
@@ -113,6 +117,8 @@
     	}
     }
 	header{
+		position:fixed;
+		width:100%;
 		min-height:4.0rem;
 		background:#444;
 		padding:0.25rem 0.5rem;
