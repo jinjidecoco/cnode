@@ -31,7 +31,6 @@ import loading from '../components/loading.vue'
   	mounted:function(){
        this.show=true;
   	  let id= this.$route.params.id;
-      console.log(id);
   	  this.$http.get('https://cnodejs.org/api/v1/topic/'+ id,)
 
   	  .then(function(res){

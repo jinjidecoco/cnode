@@ -6,7 +6,7 @@
 			<!-- 	<router-link :to="{path:'/home/?tab='+ tab.prop}">
 					{{tab.name}}
 				</router-link> -->
-				<router-link :to="{name:'Home',query:{tab:tab.prop}}">
+				<router-link :to="{name:'home',query:{tab:tab.prop}}">
 					{{tab.name}}
 				</router-link>
 			</li>
@@ -30,8 +30,9 @@
 		},
 		methods:{
 			change:function(index){
-				this.cur=index;
-				console.log(index);
+                this.cur=index;
+				// this.$emit('change',this.cur =index)
+				// console.log(index);
 			}
 		}
 

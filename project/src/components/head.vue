@@ -13,8 +13,9 @@
 					<router-link :to="{}">
 						<i class='icon-shouye1 icon iconfont f24'></i>
 						{{list.title}}
+						<i class='icon-gengduo3 icon iconfont f24' style='float:right'></i>	
 					</router-link>	
-					<i class='icon-gengduo3 icon iconfont' style='float:right'></i>	
+					
 				</li>
 			</ul>
 		</div>
@@ -97,7 +98,7 @@
     	transition:all .5s ease;
     	z-index:6;
     	&.show{
-    		transform: translateX(200px);
+    		transform: translateX(10.0rem);
     	}
     	ul li{
     		padding:0.8rem 0.75rem;
@@ -118,6 +119,7 @@
     }
 	header{
 		position:fixed;
+		top:0;
 		width:100%;
 		min-height:4.0rem;
 		background:#444;

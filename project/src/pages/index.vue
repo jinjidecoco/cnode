@@ -1,30 +1,31 @@
 <template>
-  <div class="demo">
+  <div class="home">
     <headBar></headBar>
-<!--     <tab ></tab>
- -->    <list></list>  
-        <keep-alive>
-            <router-view></router-view>
-        </keep-alive>
-
+    <tab ></tab>
   </div>
 </template>
 
 <script>
 
+// import list from '../components/list.vue'
+
 import headBar from '../components/head.vue'
 import tab from '../components/tab.vue'
-import list from '../components/list.vue'
 
 export default {
-  name: 'demo',
+  name: 'home',
   components:{
-    headBar,tab,list
+    headBar,tab
   },
   data() {
     return{
+      // show:true
   
+
     }
+  },
+  created:function(){
+    // this.show=false;
   }
 }
 </script>
